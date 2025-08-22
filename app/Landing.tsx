@@ -4,8 +4,9 @@ import { StyleSheet, Text, View, ScrollView, Button } from 'react-native';
 export default function Home() {
   return (
     <ScrollView style={styles.container}>
-      <Text style={styles.Headings}>Home Page</Text>
+      <Text style={styles.Headings}>Landing Page</Text>
       <Link href="../Landing" style={{color: "white"}}>Landing</Link>
+            <Link href="/" style={{color: "white"}}>Home</Link>
 
       <View style={styles.card}>
         <Text style={styles.cardTitle}>Welcome!</Text>
