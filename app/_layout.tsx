@@ -1,37 +1,29 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-import { Slot } from 'expo-router'
-import { SafeAreaView } from 'react-native-safe-area-context'
+import { StyleSheet, View } from 'react-native';
+import React from 'react';
+import { Slot } from 'expo-router';
+import { SafeAreaView } from 'react-native-safe-area-context';
+
+import { Footer } from "../components/client/Footer";
 
 const RootLayout = () => {
   return (
     <SafeAreaView style={styles.safeArea}>
       <View style={styles.container}>
-        <View style={{ flex: 1 }}>
-          <Slot />
-        </View>
-        <Text style={styles.footer}>Footer - Always visible</Text>
+        <Slot />
       </View>
+      <Footer />
     </SafeAreaView>
-  )
-}
+  );
+};
 
-export default RootLayout
+export default RootLayout;
 
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    backgroundColor: "#121212", 
+    backgroundColor: "#f5f5f5", 
   },
   container: {
     flex: 1,
   },
-  footer: {
-    color: "white",
-    textAlign: "center",
-    padding: 20,
-    borderTopWidth: 4,
-    borderTopColor: "#333",
-    backgroundColor: "#121212",
-  },
-})
+});
